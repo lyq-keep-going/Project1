@@ -1,0 +1,60 @@
+form [type~="text"]{
+    width: 80%;
+    height: 30px;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid #cacaca;
+}
+
+form textarea{
+    display: block;
+    width: 80%;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid #cacaca;
+}
+
+form label{
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+form [type~="file"]{
+    display: block;
+}
+
+form button{
+    height: 35px;
+    width: 80px;
+    border-radius: 5px;
+    border: 1px solid rgba(255,160,6,0.87);
+    background-color: rgba(255,160,6,0.87);
+    color: white;
+    margin: 20px;
+    margin-left: 65%;
+
+}
+
+form img{
+    display: block;
+}
+
+form{
+    border: 1px solid rgba(16, 43, 189, 0.5);
+    width: 40%;
+    padding-left: 50px;
+    border-radius: 30px;
+    margin-left: 27%;
+    margin-top: 30px;
+}
+
+
+
+h1{
+    font-family: blackJack;
+    font-size: 50px;
+    margin-top: 20px;
+    margin-left: 27%;
+    margin-bottom: -50px;
+}

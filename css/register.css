@@ -1,0 +1,74 @@
+.register{
+    width:24%;
+    background-color: rgba(255,255,255,.4);
+    border-radius: 50px;
+    padding-left: 60px;
+    padding-top: 20px;
+    margin-top: 100px;
+    margin-left: 35%;
+    padding-bottom: 20px;
+}
+
+body{
+    background-image: url("../img/backgroundImg.jpg");
+    background-size: 100% auto;
+    min-width: 1100px;
+}
+
+.register a{
+    font-size: small;
+    display: block;
+    margin-top: 20px;
+}
+
+
+.register input{
+    display: block;
+    margin-top: 10px;
+    height: 30px;
+    width: 80%;
+    border-radius: 15px;
+    border: 1px solid #c9c9c9;
+}
+
+.register label{
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.register button{
+    height: 35px;
+    width: 20%;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.87);
+    background-color: rgba(0, 0, 0, 0.87);
+    color: white;
+    margin-left: 60%;
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
+h1{
+    font-family: blackJack;
+    font-size: 80px;
+    margin-bottom: -80px;
+    margin-top: 30px;
+    margin-left: 20%;
+}
+
+footer{
+    margin-top: 10%;
+}
+
+
+
+.credit{
+    float: left;
+    margin-top: -30px;
+}
+
+
+.credit{
+    float: left;
+    margin-top: -30px;
+}

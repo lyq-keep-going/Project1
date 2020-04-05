@@ -1,0 +1,69 @@
+.image{
+    width: 43%;
+    height: 360px;
+    background-repeat: no-repeat;
+    background-image: url("../img/travel-images/normal/medium/9.jpg");
+    background-position: 50% 50%;
+    margin: 6% 2% 0 5%;
+    float: left;
+    padding: 10px;
+    background-clip: content-box;
+    box-shadow: 0px 0px 8px #828282;
+}
+
+footer{
+    clear: both;
+    margin-top: 30px;
+}
+
+.titles{
+   padding-right: 0;
+    font-family: blackJack;
+    font-size: 1.5em;
+    text-align: right;
+    display: inline-block;
+    width: 180px;
+    margin: 10px;
+}
+
+.contents{
+    margin-left: 20px;
+    display: inline-block;
+    color: rgba(18,46,130,0.88);
+    border-bottom: 2px solid #64a7e9;
+}
+
+.details{
+    border: 5px solid rgba(18, 46, 130, 0.88);
+    width: 45%;
+    margin-left: 53%;
+    margin-top: 6%;
+    box-shadow: 0px 0px 5px #c9c9c9;
+    border-radius: 30px;
+}
+
+button{
+    height: 35px;
+    width: 70px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 54, 12, 0.87);
+    background-color: rgba(255, 54, 12, 0.87);
+    color: white;
+    margin-left: 88%;
+    position: relative;
+    top: -55px;
+}
+
+.likes .number{
+    font-family: blackJack;
+    font-size: 3em;
+}
+
+.likes span{
+    color: rgba(255, 14, 53, 0.82);
+    position: relative;
+}
+.likes .outside{
+    bottom: -12px;
+    left: 30px;
+}

@@ -1,0 +1,95 @@
+header{
+    background-color: rgba(5, 19, 53, 0.9);
+    height: 80px;
+}
+header ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+    padding-top: 30px;
+    font-size: 15px;
+}
+header ul li a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 20px 14px 20px;
+    margin-top: -20px;
+}
+/*当前页面标签着重*/
+.thispage{
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 13px;
+}
+
+header ul li a:hover{
+    background-color: rgba(149,150,148,0.4);
+    border-radius: 50%;
+}
+
+header ul li{
+    display: inline-block;
+    padding-left: 20px;
+    vertical-align: bottom;
+    float: left;
+}
+
+
+
+
+/* 下拉内容 (默认隐藏) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding-left: 0px;
+    margin-left: -60px;
+    z-index: 999;
+}
+
+/* 下拉菜单的链接 */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* 鼠标移上去后修改下拉菜单链接颜色 */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* 在鼠标移上去后显示下拉菜单 */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown {
+    float: right;
+}
+
+.dropdown img{
+    margin-top: -20px;
+    margin-right: 20px;
+}
+
+footer{
+    background-color: rgba(5, 19, 53, 0.9);
+    font-size: small;
+    height: 70px;
+    color: white;
+    margin-top: 30px;
+    text-align: center;
+}
+
+footer span{
+    display: inline-block;
+    padding-top: 30px;
+}
+
+@font-face {
+    font-family: "blackJack";
+    src: url("../fonts/blackjack.otf");
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/banner.css">
+    <link rel="stylesheet" type="text/css" href="../css/browser.css">
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<header id="toTheTop">
+    <nav>
+        <ul>
+            <li><a href="home.html">首页</a></li>
+            <li><a class="thispage" href="browser.html">浏览页</a></li>
+            <li><a href="search.html">搜索页</a></li>
+
+            <div class="dropdown">
+                <img src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png" height="60px" width="60px">
+                <div class="dropdown-content">
+                    <a href="upload.html"><i class="fa fa-arrow-circle-up" fa-2x aria-hidden="true"></i>&nbsp上传</a>
+                    <a href="myPhotos.html"><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp我的照片</a>
+                    <a href="favourites.html"><i class="fa fa-folder" aria-hidden="true"></i>&nbsp我的收藏</a>
+                    <a href="../index.html"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp登入</a>
+                </div>
+            </div>
+
+        </ul>
+    </nav>
+</header>
+<body onload="loadPictures()">
+<div class="sideBar">
+    <div class="searchByTitle">
+        <h1>Search By Title</h1>
+        <hr>
+        <input name="searchTitle" type="text">
+        <button type="button" onclick="alert('搜索title')">Search</button>
+    </div>
+    <div class="searchByContent">
+        <h1>Search By Content</h1>
+        <hr>
+        <ul>
+            <a><li onclick="alert('landscape')">landscape</li></a>
+            <a><li onclick="alert('people')">people</li></a>
+            <a><li onclick="alert('animal')">animal</li></a>
+        </ul>
+
+    </div>
+    <div class="searchByCountry">
+        <h1>Hot Country</h1>
+        <hr>
+        <ul>
+            <a><li onclick="alert('china')">China</li></a>
+            <a><li onclick="alert('america')">America</li></a>
+            <a><li onclick="alert('japan')">Japan</li></a>
+            <a><li onclick="alert('britain')">Britain</li></a>
+            <a><li onclick="alert('canada')">Canada</li></a>
+            <a><li onclick="alert('korean')">Korean</li></a>
+        </ul>
+    </div>
+    <div class="searchByCity">
+        <h1>Hot City</h1>
+        <hr>
+        <ul>
+            <a><li onclick="alert('shanghai')">Shanghai</li></a>
+            <a><li onclick="alert('beijing')">Beijing</li></a>
+            <a><li onclick="alert('tokyo')">Tokyo</li></a>
+            <a><li onclick="alert('new york')">New York</li></a>
+            <a><li onclick="alert('london')">London</li></a>
+            <a><li onclick="alert('paris')">Paris</li></a>
+        </ul>
+    </div>
+</div>
+    <div class="filters">
+        <span>Content:</span>
+        <select class="contentFilter">
+            <option value="landscape">landscape</option>
+            <option value="people">people</option>
+            <option value="animal">animal</option>
+            <option value="architecture">architecture</option>
+        </select>
+        <span>Country:</span>
+        <select class="countryFilter" onchange="matchCities()">
+            <option value="--">--</option>
+            <option value="China">China</option>
+            <option value="Japan">Japan</option>
+            <option value="Italy">Italy</option>
+            <option value="America">America</option>
+        </select>
+        <span>City:</span>
+        <select class="cityFilter" disabled>
+            <option value="--">--</option>
+        </select>
+        <button type="button" onclick="alert('已经完成筛选')">Filter</button>
+    </div>
+    <!--实现二级联动-->
+    <script>
+        function matchCities() {
+            var country = document.getElementsByClassName("countryFilter")[0];
+            var city = document.getElementsByClassName("cityFilter")[0];
+            var China = new Array("Shanghai","Kunming","Beijing","Yantai");
+            var Japan = new Array("Tokyo", "Osaka", "Kamakura");
+            var Italy = new Array("Roma","Milan","Venice","Florence");
+            var America = new Array("New York","San Francisco", "Washington");
+            city.options.length = 0;//先删除上一次筛选残留的选项
+            switch(country.selectedIndex){
+                case 1:{
+                    city.disabled = false;
+                    for(var i = 0; i < 4; i++){
+                        var option = document.createElement("option");
+                        city.appendChild(option);
+                        option.value = China[i];
+                        option.text = China[i];
+                    }
+                    break;
+                }
+                case 2:{
+                    city.disabled = false;
+                    for(var i = 0; i < 3; i++){
+                        var option = document.createElement("option");
+                        city.appendChild(option);
+                        option.value = Japan[i];
+                        option.text = Japan[i];
+                    }
+                    break;
+                }
+                case 3:{
+                    city.disabled = false;
+                    for(var i = 0; i < 4; i++){
+                        var option = document.createElement("option");
+                        city.appendChild(option);
+                        option.value = Italy[i];
+                        option.text = Italy[i];
+                    }
+                    break;
+                }
+                case 4:{
+                    city.disabled = false;
+                    for(var i = 0; i < 3; i++){
+                        var option = document.createElement("option");
+                        city.appendChild(option);
+                        option.value = America[i];
+                        option.text = America[i];
+                    }
+                    break;
+                }
+            }
+        }
+
+
+    </script>
+
+    <div class="pictures" >
+    </div>
+    <script>/*在div中放进图片*/
+        function loadPictures() {
+            let picturesDiv = document.getElementsByClassName("pictures")[0];
+            let i;
+            for(i = 1; i <= 16; i++){
+                let link = document.createElement("a");
+                link.href = "browser.html";
+                let imgDiv = document.createElement("div");
+                imgDiv.setAttribute("class","imgDiv");
+                link.appendChild(imgDiv);
+                picturesDiv.appendChild(link);
+                imgDiv.style.cssText = "margin:20px;box-shadow :0px 0px 8px #cacaca";
+                imgDiv.style.backgroundImage = "url(../img/travel-images/normal/small/"+i+".jpg)" ;
+                imgDiv.style.backgroundRepeat = "no-repeat";
+                imgDiv.style.backgroundPosition = "center";
+                imgDiv.style.backgroundSize = "cover";
+            }
+        }
+    </script>
+
+    <div class="pages">
+        <a><i class="fa fa-fast-backward" aria-hidden="true"></i></a>
+        <ul>
+            <a><li>1</li></a>
+            <a><li>2</li></a>
+            <a><li>3</li></a>
+            <a><li>4</li></a>
+            <a><li>5</li></a>
+            <li>...</li>
+        </ul>
+        <a><i class="fa fa-fast-forward" aria-hidden="true"></i></a>
+
+    </div>
+
+    <!--页面右下角悬浮按钮-->
+    <div class="float">
+        <a href="#toTheTop"><img src="../icons/up.svg" height="50px" width="50px"></a>
+        <img src="../icons/refresh.svg" height="50px" width="50px" class="refresh" onclick="alert('图片已刷新')" >
+    </div>
+</body>
+<footer>
+    <span>Designed by Luo yuqi. Student ID:18307130255.</span>
+</footer>
+</html>

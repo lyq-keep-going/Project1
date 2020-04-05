@@ -1,0 +1,113 @@
+/*装饰悬浮部分(复用）*/
+.float img{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+.float a img{
+    position: fixed;
+    right: 10px;
+    bottom: 70px;
+}
+/*控制sidebar外边框*/
+.sideBar{
+    float: left;
+    width: 31%;
+    padding-bottom: 80px;
+}
+.searchByTitle,.searchByCity,.searchByCountry,.searchByContent{
+    border: 1px solid rgba(4, 17, 65, 0.4);
+    width: 90%;
+    margin: 20px 0 0 10px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.sideBar h1{
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.sideBar hr{
+    margin-left: -10px;;
+    color: rgba(4, 17, 65, 0.4);
+}
+
+.searchByTitle input{
+    width: 60%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #c9c9c9;
+    margin-bottom: 10px;
+}
+.searchByTitle button{
+    height: 35px;
+    width:20%;
+    border-radius: 5px;
+    border: 1px solid #c9c9c9;
+}
+
+
+.sideBar ul{
+    list-style-type: none;
+}
+
+.sideBar ul li{
+    margin-bottom: 10px;
+}
+
+.sideBar ul li:hover{
+    color: #64a7e9;
+}
+
+/*筛选器部分*/
+.filters{
+    margin-top: 40px;
+}
+
+.filters select{
+    height: 40px;
+    width: 10%;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.filters button{
+    height: 35px;
+    width: 5%;
+    border-radius: 5px;
+    border: 1px solid #c9c9c9 ;
+}
+
+
+/*使脚部始终在浮动元素下部*/
+footer{
+    clear: both;
+}
+
+.pictures{
+    margin-top:30px;
+    margin-left: 70px;
+}
+
+.pages ul {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.pages li{
+    display: inline-block;
+}
+
+.pages{
+    padding-left: 60%;
+}
+
+.imgDiv{
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+    background-size: cover;
+    background-clip: content-box;
+    padding: 10px;
+}

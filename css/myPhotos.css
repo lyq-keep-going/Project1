@@ -1,0 +1,91 @@
+/*热门照片部分*/
+.researchResults{
+    padding-top: 30px;
+}
+.researchResults div:not(.imgDiv){
+    border: 10px white solid;
+    box-shadow: 0px 0px 10px rgba(130,130,130,0.58);
+    overflow: hidden;
+    width: 70%;
+    height: 170px;
+    margin-left: 15%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+/*多行文本溢出显示...代码*/
+.researchResults p{
+    margin-top: 10px;
+    position:relative;
+    line-height:1.4em;
+    /*设置容器高度为3倍行高就是显示3行*/
+    height:5.6em;
+    overflow:hidden;
+    margin-left: 10px;
+}
+.researchResults p::after {
+    content: '...';
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 20px 1px 35px;
+    background: #fff;
+}
+
+.researchResults h2{
+    margin-top: 1.5%;
+    margin-left: 10px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+.researchResults .edit{
+    height: 35px;
+    width: 70px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,160,6,0.87);
+    background-color: rgba(255,160,6,0.87);
+    color: white;
+    margin-left:300px;
+}
+
+.researchResults .delete{
+    height: 35px;
+    width: 70px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 54, 12, 0.87);
+    background-color: rgba(255, 54, 12, 0.87);
+    color: white;
+    margin-left: 10px;
+}
+
+.imgDiv{
+    height: 150px;
+    width: 150px;
+    background-image: url("../img/travel-images/normal/small/1.jpg");
+    float: left;
+    margin: 10px;
+}
+
+.pages ul {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.pages li{
+    display: inline-block;
+}
+
+.pages{
+    padding-left: 45%;
+}
+
+h1{
+    font-family: blackJack;
+    font-size: 30px;
+    margin-left: 180px;
+    margin-bottom: -50px;
+    margin-top: 30px;
+}
+

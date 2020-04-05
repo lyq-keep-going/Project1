@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/banner.css">
+    <link rel="stylesheet" type="text/css" href="../css/upload.css">
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<header id="toTheTop">
+    <nav>
+        <ul>
+            <li><a href="home.html">首页</a></li>
+            <li><a href="browser.html">浏览页</a></li>
+            <li><a href="search.html">搜索页</a></li>
+
+            <div class="dropdown">
+                <img src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png" height="60px" width="60px">
+                <div class="dropdown-content">
+                    <a href="upload.html"><i class="fa fa-arrow-circle-up" fa-2x aria-hidden="true"></i>&nbsp上传</a>
+                    <a href="myPhotos.html"><i class="fa fa-picture-o" aria-hidden="true"></i>&nbsp我的照片</a>
+                    <a href="favourites.html"><i class="fa fa-folder" aria-hidden="true"></i>&nbsp我的收藏</a>
+                    <a href="../index.html"><i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp登入</a>
+                </div>
+            </div>
+
+        </ul>
+    </nav>
+</header>
+<body>
+    <h1>Upload</h1>
+    <form name="uploadImg">
+        <label>上传图片</label>
+        <input type="file" id="uploadedImg"><img src="" id="showImg" width="150px" height="150px">
+        <label>图片标题</label>
+        <input type="text" name="pictureName">
+        <label>图片描述</label>
+        <textarea></textarea>
+        <label>拍摄国家</label>
+        <input type="text" name="country">
+        <label>拍摄城市</label>
+        <input type="text" name="city">
+        <button type="button" onclick="alert('图片已上传');window.location.href = 'myPhotos.html' ">Submit</button>
+    </form>
+
+
+
+    <!--上传照片并预览-->
+    <script>
+        var uploadedImg = document.getElementById("uploadedImg");
+        var showImg = document.getElementById("showImg");
+        uploadedImg.onchange = function () {
+            var imgData = this.files[0];
+            var reader = new FileReader();
+            reader.readAsDataURL(imgData);//异步读取文件内容，结果用data:url的字符串形式表示
+            /*当读取操作成功完成时调用*/
+            reader.onload = function () {
+                console.log(this.result);//取得数据 这里的this指向FileReader（）对象的实例reader
+                var imgUrl = this.result.toString();
+                showImg.setAttribute("src", imgUrl)//赋值给img标签让它显示出来
+            }
+        }
+    </script>
+</body>
+
+<footer>
+    <span>Designed by Luo yuqi. Student ID:18307130255.</span>
+</footer>
+</html>

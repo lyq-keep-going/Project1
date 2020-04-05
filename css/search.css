@@ -1,0 +1,121 @@
+/*装饰悬浮部分(复用）*/
+.float img{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+.float a img{
+    position: fixed;
+    right: 10px;
+    bottom: 70px;
+}
+.searchMethods input[type~="text"]{
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #c9c9c9;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.searchMethods .searchIcon{
+    display: inline-block;
+}
+
+.searchMethods button{
+    height: 35px;
+    width: 20%;
+    border-radius: 5px;
+    border: 1px solid rgba(255,160,6,0.87);
+    background-color: rgba(255,160,6,0.87);
+    color: white;
+    margin-bottom: 20px;
+    margin-left: 71%;
+}
+
+.searchMethods textarea{
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 90%;
+}
+.searchMethods{
+    border: 1px solid rgba(4, 17, 65, 0.4);
+    width: 28%;
+    margin: 30px 0 0 10px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-top: 20px;
+    float: left;
+    box-shadow: -2px 2px 10px rgba(130,130,130,0.58);
+}
+
+footer{
+    clear: both;
+}
+
+/*热门照片部分*/
+.researchResults{
+    padding-top: 30px;
+    margin-left: 280px;
+}
+.researchResults div:not(.imgDiv){
+    border: 10px white solid;
+    box-shadow: 0px 0px 10px rgba(130,130,130,0.58);
+    overflow: hidden;
+    width: 80%;
+    height: 170px;
+    margin-left: 15%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.imgDiv{
+    height: 150px;
+    width: 150px;
+    background-image: url("../img/travel-images/normal/small/1.jpg");
+    float: left;
+    margin: 10px;
+}
+
+/*多行文本溢出显示...代码*/
+.researchResults p{
+    margin-top: 3%;
+    position:relative;
+    line-height:1.4em;
+    /*设置容器高度为3倍行高就是显示3行*/
+    height:5.6em;
+    overflow:hidden;
+    margin-left: 10px;
+}
+.researchResults p::after {
+    content: '...';
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 20px 1px 35px;
+    background: #fff;
+}
+
+.researchResults h2{
+    margin-top: 1.5%;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.pages ul {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.pages li{
+    display: inline-block;
+}
+
+.pages{
+    padding-left: 60%;
+}
+
+
