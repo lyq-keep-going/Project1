@@ -93,3 +93,13 @@ footer span{
     font-family: "blackJack";
     src: url("../fonts/blackjack.otf");
 }
+
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.main-content{
+    flex:1;
+}

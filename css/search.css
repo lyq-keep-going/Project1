@@ -58,7 +58,7 @@ footer{
 /*热门照片部分*/
 .researchResults{
     padding-top: 30px;
-    margin-left: 280px;
+    margin-left: 30%;
 }
 .researchResults div:not(.imgDiv){
     border: 10px white solid;
