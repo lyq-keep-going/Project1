@@ -6,7 +6,7 @@
 ##二、项目完成情况
 本次项目涉及HTML、CSS及少数JS，本人bonus之外功能性要求全部完成。bunus除响应式布局实现可能不够全面之外基本完成。以下是各页面的截图（展示的是chrome上效果，firefox外观差不多，除了input框的默认表现不太一样，但不影响整体感官）
 ###主页
-![主页截图](./img/pageCuts/home1.png)
+![主页截图](https://github.com/lyq-keep-going/Project1/raw/master/img/pageCuts/home1.png)
 ![主页截图](./img/pageCuts/home2.png)
 ![主页截图](./img/pageCuts/home3.png)
 ###浏览页
